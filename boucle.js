@@ -126,14 +126,71 @@ affichemoyenne(moyenneeleve)
 //exercice panier fruit
 
 // mon tableau représentant mon panier de fruits 
-let fruits = ["cerises", "pommes", "cerises", "pommes", "poires", "bananes", 
-"pommes", "poires", "cerises"];
+let fruits = ["cerises", "pommes", "cerises", "pommes", "poires", "bananes",
+    "pommes", "poires", "cerises"];
 
 /**
  * role : compter chaque fruit 
  * parametre : les fruits
- * return : resultat affiche prendre la forme 
+ * return : le nombre de chaque fruit 
  */
 
 // poche les fruit un par un sois une cerise sois une pommme
-// 
+
+
+
+function comptefruits(tableauFruit) {
+
+    let pommes = 0;
+    let cerises = 0;
+    let poires = 0;
+    let bananes = 0;
+
+    tableauFruit.forEach(fruit => {
+
+        if (fruit === "pommes") {
+            pommes++
+        }
+        else if (fruit === "cerises") {
+            cerises++
+        }
+
+        else if (fruit === "poires") {
+            poires++
+        }
+
+        else if (fruit === "bananes") {
+            bananes++
+        }
+
+        else {
+            compteurinconnus++
+        }
+
+
+    });
+
+    return
+        il ya ${ pommes } pommes,
+        il ya ${ cerises } cerises,
+            il ya ${ poires } poires,
+                il ya ${ bananes } bananes,
+
+}
+
+function afficherdanspage(aAfficher){
+
+    document.querySelector("body").innerHTML += `<p> ${aAfficher}</p>`
+}
+
+let pharseaAfficher = fruit(fruits)
+
+
+
+// code cesar
+
+/**
+ * role : 
+ * parametre : 
+ * return : 
+ */
