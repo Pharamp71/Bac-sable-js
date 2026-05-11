@@ -139,58 +139,157 @@ let fruits = ["cerises", "pommes", "cerises", "pommes", "poires", "bananes",
 
 
 
-function comptefruits(tableauFruit) {
+// function comptefruits(tableauFruit) {
 
-    let pommes = 0;
-    let cerises = 0;
-    let poires = 0;
-    let bananes = 0;
+let pommes = 0;
+let cerises = 0;
+let poires = 0;
+let bananes = 0;
+fruits.forEach(fruit => {
 
-    tableauFruit.forEach(fruit => {
+    if (fruit === "pommes") {
+        pommes++
+    }
+    else if (fruit === "cerises") {
+        cerises++
+    }
 
-        if (fruit === "pommes") {
-            pommes++
-        }
-        else if (fruit === "cerises") {
-            cerises++
-        }
+    else if (fruit === "poires") {
+        poires++
+    }
 
-        else if (fruit === "poires") {
-            poires++
-        }
+    else if (fruit === "bananes") {
+        bananes++
+    }
 
-        else if (fruit === "bananes") {
-            bananes++
-        }
-
-        else {
-            compteurinconnus++
-        }
+    else {
+        compteurinconnus++
+    }
 
 
-    });
+});
 
-    return
-        il ya ${ pommes } pommes,
-        il ya ${ cerises } cerises,
-            il ya ${ poires } poires,
-                il ya ${ bananes } bananes,
-
+/*  return
+      il ya ${ pommes } pommes,
+      il ya ${ cerises } cerises,
+          il ya ${ poires } poires,
+              il ya ${ bananes } bananes,
+ 
 }
-
-function afficherdanspage(aAfficher){
-
-    document.querySelector("body").innerHTML += `<p> ${aAfficher}</p>`
+ 
+function afficherdanspage(aAfficher) {
+ 
+  document.querySelector("body").innerHTML += `<p> ${aAfficher}</p>`
 }
-
+ 
 let pharseaAfficher = fruit(fruits)
-
-
-
+ 
+ 
+ 
 // code cesar
+ 
+/**
+* role : chiffrer un mot
+* parametre : un mot prend un mot en remplacent
+* return : dechiffer le mot hasard ou y aller plus loin
+*/
+// créer un scirpt qui permet de chiffrer un mot en prenant chacune des lettres et en la remplaçant par celle qui suit dans l’alphabet. 
+
+//
+
+// l'alphabet 
+
+const Alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
+    , "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+let motEncode = "";
+//role : -> encoder un message
+//parametre -> le mot encoder
+// return -> mot chiffré
+
+function codeCesar(motAencoder) {
+
+    // un alaphabet
+
+    const Alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
+        , "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+
+    //récupérer les lettres du mot une par une
+    for (let i = 0; i < motAencoder.length; i++) {
+
+        let lettrecode = "";
+
+        //on stock le charactere a la position i du mot
+        let LettreActuelle = motAencoder.charAt(i)
+        console.log(LettreActuelle)
+
+        if (LettreActuelle === "z") {
+            lettrecode = "a"
+        } else {
+
+        }
+
+        //quand il aura récupérer une lettre il va chercher la position de cette lettre dans l'alphabet -> stock dans une variable poslettreactuelle
+        let posLettreActuelle = Alphabet.indexOf(i)
+        console.log(posLettreActuelle)
+
+        //va chercher la lettre a la position suivante
+        lettrecode = Alphabet[posLettreActuelle + 1]
+        console.log(lettrecode)
+
+        //stock dans une variable pour recomposer le mot encoder
+        motEncode = motEncode + lettrecode
+        console.log(motEncode)
+
+    }
+    //return le mot encode
+    return motEncode
+
+}
+
+function Affichedansbody(trucAafficher) {
+
+    document.querySelector("body").innerHTML += `<p> ${trucAafficher} </p>`
+
+}
+
+function scenario(motAencoder) {
+    let motEncode = codeCesar(motAencoder)
+    Affichedansbody(motEncode)
+}
+
+
+
+// JACKPOTTT!!!!!!
+
+//créer une fonction
+//role : choisir 3 emojis
+//parametre : tableau avec tous les emojis possibles (entre 3 et 5)
+//return : les 3 emojis selectionné
+
+function emojiAlea(tableauEmoji) {
+
+    // créer le tableau d'emoji
+
+    //tirer 3 chiffre aleatoirement -> Math.floor(Math.random()*3)
+
+    //attribuer un emoji a chaque chiffre tiré -> si on tire 0 on va chercher l'emoji a la position 0 dans une boite
+
+    //stocker mes emojis dans une boite -> je reconstruit un tableau avec les emoji piochés 
+
+    //retourner les emojis pioché
+
+}
 
 /**
- * role : 
- * parametre : 
- * return : 
+ * role : comparer les emojis pour définir si victoire
+ * parametre : les emojis piochés -> un tableau
+ * return : true/false -> boolean
  */
+
+/**
+ * role : afficher le resultat dans le body
+ * parametre : les pioché, et le resultat 
+ * return : rien car elle affiche
+ */
+
