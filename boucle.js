@@ -30,3 +30,16 @@ for (let i = 1; i<=10; i++){
 }
 
 }
+
+// un script repete 50 fois i will not waste Chalk
+//role : ecrit 50 fois "cnsbd"
+// parametre: non
+// return: non car elle affiche
+
+function punition(){
+
+for (let i = 1; i <= 50; i++) {
+    console.log("I will not waste Chalk")
+}
+
+}
