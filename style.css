@@ -1,3 +1,12 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 .red{
     color: red;
 }
@@ -51,4 +60,51 @@
     width: 100px;
     height: 100px;
     border: 10px solid blueviolet;
+}
+
+/* profile utlisatuers */
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.space-between{
+    justify-content: space-between;
+
+}
+.large-30{
+    width: 30%;
+}
+
+.large-60{
+    width: 60%;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.gap-32{
+    gap: 32px;
+}
+
+.gap-12{
+    gap: 12px;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    background-color: rgba(12, 218, 163, 0.416);
+    color: white;
+    border-radius: 15px;
+    padding: 12px;
+     font-family: "Space Grotesk", sans-serif;
 }
